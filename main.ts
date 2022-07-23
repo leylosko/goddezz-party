@@ -12,11 +12,11 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
     info.changeScoreBy(1)
-    otherSprite.destroy(effects.fire, 100)
+    otherSprite.destroy(effects.spray, 100)
 })
 sprites.onOverlap(SpriteKind.syt, SpriteKind.Projectile, function (sprite, otherSprite) {
     info.changeScoreBy(-1)
-    otherSprite.destroy(effects.bubbles, 100)
+    otherSprite.destroy(effects.spray, 100)
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     mySprite.x = 100
